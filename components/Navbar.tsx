@@ -29,6 +29,7 @@ const navItems = [
   "Gallery",
   "Contact",
 ];
+
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -39,8 +40,8 @@ export default function DrawerAppBar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        My Resturant
+      <Typography variant="h6" sx={{ my: 2, color: "black" }}>
+        My Restaurant
       </Typography>
       <Divider />
       <List>
@@ -61,7 +62,11 @@ export default function DrawerAppBar(props: Props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar elevation={0} component="nav" sx={{ background: "transparent" }}>
+      <AppBar
+        elevation={0}
+        component="nav"
+        sx={{ background: "transparent", px: 3 }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -73,11 +78,18 @@ export default function DrawerAppBar(props: Props) {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant="h5" // Keeping the font size as requested
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "block" },
+              color: "transparent", // Making the text transparent so gradient shows
+              background: "linear-gradient(45deg, #FF1493, #1E90FF)",
+              backgroundClip: "text", // Apply gradient to the text itself
+              fontWeight: "bold", // Maintain bold text as per original design
+            }}
           >
-            My Resturant
+            My Restaurant
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (

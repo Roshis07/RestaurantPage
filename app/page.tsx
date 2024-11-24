@@ -1,6 +1,7 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
 import Navbar from "@/components/Navbar";
+import Heading from "@/components/Heading";
 
 const Page = () => {
   return (
@@ -15,7 +16,9 @@ const Page = () => {
           },
         }}
       >
-        <Navbar></Navbar>
+        <Navbar />
+        <Toolbar />
+        <Heading></Heading>
       </Box>
     </>
   );
