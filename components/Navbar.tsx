@@ -19,7 +19,7 @@ interface Props {
   window?: () => Window;
 }
 
-const drawerWidth = 240;
+const drawerWidth = { xs: 100, sm: 240 };
 const navItems = [
   "Home",
   "About",

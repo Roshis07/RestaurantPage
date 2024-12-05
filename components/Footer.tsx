@@ -59,8 +59,13 @@ const Footer = () => {
       >
         Special menu
       </Typography>
-      <Stack direction={"row"} gap={12} marginTop={1.2} paddingX={6}>
-        <Stack direction={"row"} gap={2.5}>
+      <Stack
+        direction={{ sm: "row", xs: "column" }}
+        gap={12}
+        marginTop={1.2}
+        paddingX={6}
+      >
+        <Stack direction={{ xs: "column", sm: "row" }} gap={2.5}>
           {visibleCards.map((card, index) => (
             <Card
               key={`${card.title}-${index}`}

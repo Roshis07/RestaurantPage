@@ -1,5 +1,5 @@
 "use client";
-import { Stack, Button } from "@mui/material";
+import { Stack, Button, Box, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import burgerImage from "../image/burger.png";
@@ -18,74 +18,126 @@ const Heading = () => {
   }, []);
 
   return (
-    <Stack direction={"row"} sx={{ height: "400px" }}>
-      <Stack
+    <>
+      <Typography
+        variant="h5"
+        component="div"
         sx={{
-          width: "50vw",
-          alignSelf: "center",
-          paddingX: 6,
+          flexGrow: 1,
+          display: { xs: "block", sm: "none" },
+          color: "transparent",
+          background: "linear-gradient(45deg, #FF1493, #1E90FF)",
+          backgroundClip: "text",
+          fontWeight: "bold",
+          textAlign: "center",
+          marginBottom: "15px",
         }}
       >
-        <h1
-          style={{
-            fontSize: "4rem",
-            fontWeight: "bold",
-            background: "linear-gradient(45deg, #FF4500, #FFA500, #FFD700)",
-            backgroundClip: "text",
-            color: "transparent",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+        My Restaurant
+      </Typography>
+      <Stack
+        direction={{ xs: "column-reverse", sm: "row" }}
+        sx={{ height: { xs: "auto", sm: "400px" } }}
+      >
+        <Stack
+          sx={{
+            width: { xs: "100vw", sm: "50vw" },
+            alignSelf: "center",
+            paddingX: 6,
           }}
         >
-          Best Burgers
-        </h1>
-        <h2 style={{ color: "white" }}>
-          Taste the difference with every bite, made fresh and served hot.
-        </h2>
-        <h6 style={{ color: "white", marginTop: "5px" }}>
-          Make your day better with our mouth-watering burgers, crafted just for
-          you, using the freshest ingredients and bursting with flavors that
-          will leave you craving more!
-        </h6>
-        <Stack direction="row" spacing={2} marginTop={2}>
-          <Button
-            color="secondary"
+          <Box
+            component="h1"
             sx={{
-              borderRadius: "50px",
-              paddingX: 8,
-              paddingY: 1,
-              border: "2px solid white",
-              fontWeight: 800,
+              fontSize: {
+                sm: "4rem",
+                xs: "2rem",
+              },
+              fontWeight: "bold",
+              background: "linear-gradient(45deg, #FF4500, #FFA500, #FFD700)",
+              backgroundClip: "text",
+              color: "transparent",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
             }}
           >
-            Order Now
-          </Button>
-          <Button
-            variant="contained"
-            color="success"
+            Best Burgers
+          </Box>
+          <Typography
+            variant="h2"
             sx={{
-              borderRadius: "50px",
-              paddingX: 8,
-              paddingY: 1,
-              fontWeight: 800,
+              color: "white",
+              fontSize: { sm: "2rem", xs: "1.2rem" },
             }}
           >
-            Contact Us
-          </Button>
+            Taste the difference with every bite, made fresh and served hot.
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              color: "white",
+              marginTop: "5px",
+              fontSize: { sm: "1.2rem", xs: "0.8rem" },
+            }}
+          >
+            Make your day better with our mouth-watering burgers, crafted just
+            for you, using the freshest ingredients and bursting with flavors
+            that will leave you craving more!
+          </Typography>
+          <Stack direction="row" spacing={2} marginTop={2}>
+            <Button
+              color="secondary"
+              sx={{
+                borderRadius: "50px",
+                paddingX: 8,
+                paddingY: { sm: 1, xs: 0.5 },
+                border: "2px solid white",
+                fontWeight: 800,
+              }}
+            >
+              Order Now
+            </Button>
+            <Button
+              variant="contained"
+              color="success"
+              sx={{
+                borderRadius: "50px",
+                paddingX: 8,
+                paddingY: 1,
+                fontWeight: 800,
+              }}
+            >
+              Contact Us
+            </Button>
+          </Stack>
+        </Stack>
+        <Stack
+          direction="row"
+          sx={{
+            paddingLeft: { xs: "30px" },
+          }}
+        >
+          <Stack gap={0} sx={{ flex: 1, alignSelf: "center" }}>
+            <Image
+              src={burgerImage}
+              alt="Delicious Burger"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </Stack>
+          <Stack alignSelf="center" flex={1} height={{ xs: 130, sm: 325 }}>
+            <Image
+              src={currentImage ? cokezero : cokeImage}
+              alt="Coke image"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+              }}
+            />
+          </Stack>
         </Stack>
       </Stack>
-      <Stack gap={0} sx={{ flex: 1, alignSelf: "center" }}>
-        <Image src={burgerImage} alt="Delicious Burger" width={400} />
-      </Stack>
-      <Stack sx={{ position: "relative" }}>
-        {currentImage === 0 && (
-          <Image src={cokeImage} alt="Coke image" height={370} />
-        )}
-        {currentImage === 1 && (
-          <Image src={cokezero} alt="Coke Zero" height={430} />
-        )}
-      </Stack>
-    </Stack>
+    </>
   );
 };
 

@@ -18,7 +18,6 @@ export default function RootLayout({
           padding: 0,
           height: "100%",
           width: "100%",
-          overflow: "hidden", // Prevent overflow on body
         }}
       >
         <ThemeProvider theme={theme}>{children}</ThemeProvider>
