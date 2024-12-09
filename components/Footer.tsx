@@ -60,7 +60,13 @@ const Footer = () => {
         Special menu
       </Typography>
       <Stack
-        direction={{ sm: "row", xs: "column" }}
+        direction={{
+          sm: "column",
+          xs: "column",
+          md: "column",
+          lg: "column",
+          xl: "row",
+        }}
         gap={12}
         marginTop={1.2}
         paddingX={6}

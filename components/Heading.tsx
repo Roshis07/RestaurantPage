@@ -37,7 +37,7 @@ const Heading = () => {
       </Typography>
       <Stack
         direction={{ xs: "column-reverse", sm: "row" }}
-        sx={{ height: { xs: "auto", sm: "400px" } }}
+        sx={{ height: { xs: "auto", sm: "auto", lg: "400px", md: "auto" } }}
       >
         <Stack
           sx={{
@@ -50,8 +50,10 @@ const Heading = () => {
             component="h1"
             sx={{
               fontSize: {
-                sm: "4rem",
+                sm: "2rem",
                 xs: "2rem",
+                lg: "4rem",
+                md: "2.5rem",
               },
               fontWeight: "bold",
               background: "linear-gradient(45deg, #FF4500, #FFA500, #FFD700)",
@@ -67,7 +69,12 @@ const Heading = () => {
             variant="h2"
             sx={{
               color: "white",
-              fontSize: { sm: "2rem", xs: "1.2rem" },
+              fontSize: {
+                sm: "1.2rem",
+                xs: "1.2rem",
+                md: "1.5rem",
+                lg: "2rem",
+              },
             }}
           >
             Taste the difference with every bite, made fresh and served hot.
@@ -77,7 +84,12 @@ const Heading = () => {
             sx={{
               color: "white",
               marginTop: "5px",
-              fontSize: { sm: "1.2rem", xs: "0.8rem" },
+              fontSize: {
+                sm: "0.9rem",
+                xs: "0.8rem",
+                md: "1rem",
+                lg: "1.2rem",
+              },
             }}
           >
             Make your day better with our mouth-watering burgers, crafted just
@@ -124,7 +136,11 @@ const Heading = () => {
               style={{ width: "100%", height: "auto" }}
             />
           </Stack>
-          <Stack alignSelf="center" flex={1} height={{ xs: 130, sm: 325 }}>
+          <Stack
+            alignSelf="center"
+            flex={1}
+            height={{ xs: 130, sm: 110, lg: 200, md: 170, xl: 325 }}
+          >
             <Image
               src={currentImage ? cokezero : cokeImage}
               alt="Coke image"

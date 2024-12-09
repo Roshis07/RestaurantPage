@@ -19,8 +19,10 @@ const Footervedio = () => {
       muted // Mute the video to ensure autoplay works
       onEnded={handleVideoEnd} // Event to handle video end
       style={{
-        width: "500px",
-        height: "220px",
+        width: "auto",
+        height: "auto",
+        maxWidth: "500px",
+        maxHeight: "200px",
         objectFit: "cover",
         border: "3px outset #e0cfe3", // Soft lavender
         borderRadius: "15px", // Optional: Round the corners
