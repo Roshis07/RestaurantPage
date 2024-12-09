@@ -2,7 +2,7 @@
 import { Stack, Button, Box, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import burgerImage from "/assets/burger.png";
+import burgerImage from "/assets/Burger.png";
 import cokeImage from "/assets/coke.png";
 import cokezero from "/assets/cokezero.png";
 
