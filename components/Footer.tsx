@@ -1,13 +1,12 @@
 "use client";
 import { Typography, Card, Stack, CardMedia, CardContent } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import burger1 from "../image/burger1.png";
-// import OpeningHours from "./OpeningHours";
-import burger2 from "../image/burger2.png";
-import burger3 from "../image/burger3.png";
-import drink1 from "../image/drink1.png";
-import deserat from "../image/deseart.png";
-import breakfast from "../image/breakfast.png";
+import burger1 from "../assets/burger1.png";
+import burger2 from "../assets/burger2.png";
+import burger3 from "../assets/burger3.png";
+import drink1 from "../assets/drink1.png";
+import deserat from "../assets/deseart.png";
+import breakfast from "../assets/breakfast.png";
 import Footervedio from "./Footervedio";
 
 const Footer = () => {

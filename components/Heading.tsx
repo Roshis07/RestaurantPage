@@ -2,9 +2,9 @@
 import { Stack, Button, Box, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import burgerImage from "../image/burger.png";
-import cokeImage from "../image/coke.png";
-import cokezero from "../image/cokezero.png";
+import burgerImage from "/assets/burger.png";
+import cokeImage from "/assets/coke.png";
+import cokezero from "/assets/cokezero.png";
 
 const Heading = () => {
   const [currentImage, setCurrentImage] = useState(0);
